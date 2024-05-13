@@ -7,11 +7,12 @@ type Props = {
 };
 
 const Timer: React.FC<Props> = ({ remmainingTime }) => {
-  const [time, reset] = useTimer(remmainingTime);
+  const [time, reset, stop] = useTimer(remmainingTime);
   return (
     <>
-      <div>{time}</div>
+      <div>{time > 0 ? time : 0}</div>
       <button onClick={reset}>Reset</button>
+      <button onClick={stop}>stop</button>
     </>
   );
 };

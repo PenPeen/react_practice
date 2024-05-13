@@ -1,26 +1,46 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const DEFAULT_TIME = 5;
 
 export const useTimer = (
   remmainingTime = DEFAULT_TIME,
-): [time: number, reset: () => void] => {
+): [time: number, reset: () => void, stop: () => void] => {
+  const intervalIdRef = useRef<NodeJS.Timeout | null>(null);
   const [time, setTime] = useState(remmainingTime);
   const reset = () => {
     setTime(remmainingTime);
+
+    if (intervalIdRef.current !== null) {
+      clearInterval(intervalIdRef.current);
+    }
+
+    intervalIdRef.current = setInterval(() => {
+      setTime((time) => time - 1);
+    }, 1000);
+  };
+
+  const stop = () => {
+    if (intervalIdRef.current !== null) {
+      clearInterval(intervalIdRef.current);
+    }
+    setTime(-1);
   };
 
   useEffect(() => {
-    const id = setInterval(() => {
+    intervalIdRef.current = setInterval(() => {
       setTime((time) => time - 1);
     }, 1000);
 
-    return () => clearInterval(id);
+    return () => {
+      if (intervalIdRef.current !== null) {
+        clearInterval(intervalIdRef.current);
+      }
+    };
   }, []);
 
   useEffect(() => {
     if (time === 0) setTime(remmainingTime);
   }, [time, remmainingTime]);
 
-  return [time, reset];
+  return [time, reset, stop];
 };
