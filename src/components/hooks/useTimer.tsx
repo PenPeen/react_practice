@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { getPrimes } from '@/utils/prime';
 
@@ -11,17 +11,21 @@ export const useTimer = (
 
   const intervalIdRef = useRef<NodeJS.Timeout | null>(null);
   const [time, setTime] = useState(remmainingTime);
-  const reset = () => {
+  const tick = () => {
+    intervalIdRef.current = setInterval(() => {
+      setTime((time) => time - 1);
+    }, 1000);
+  };
+
+  const reset = useCallback(() => {
     setTime(remmainingTime);
 
     if (intervalIdRef.current !== null) {
       clearInterval(intervalIdRef.current);
     }
 
-    intervalIdRef.current = setInterval(() => {
-      setTime((time) => time - 1);
-    }, 1000);
-  };
+    tick();
+  }, [remmainingTime]);
 
   const stop = () => {
     if (intervalIdRef.current !== null) {
@@ -31,16 +35,14 @@ export const useTimer = (
   };
 
   useEffect(() => {
-    intervalIdRef.current = setInterval(() => {
-      setTime((time) => time - 1);
-    }, 1000);
+    reset();
 
     return () => {
       if (intervalIdRef.current !== null) {
         clearInterval(intervalIdRef.current);
       }
     };
-  }, []);
+  }, [reset]);
 
   useEffect(() => {
     if (time === 0) setTime(remmainingTime);
