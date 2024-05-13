@@ -1,10 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+
+import { getPrimes } from '@/utils/prime';
 
 const DEFAULT_TIME = 5;
 
 export const useTimer = (
   remmainingTime = DEFAULT_TIME,
-): [time: number, reset: () => void, stop: () => void] => {
+): [time: number, primes: number[], reset: () => void, stop: () => void] => {
+  const primes = useMemo(() => getPrimes(remmainingTime), [remmainingTime]);
+
   const intervalIdRef = useRef<NodeJS.Timeout | null>(null);
   const [time, setTime] = useState(remmainingTime);
   const reset = () => {
@@ -42,5 +46,5 @@ export const useTimer = (
     if (time === 0) setTime(remmainingTime);
   }, [time, remmainingTime]);
 
-  return [time, reset, stop];
+  return [time, primes, reset, stop];
 };
