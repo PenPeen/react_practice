@@ -6,7 +6,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 
 import CountUp from './components/CountUp';
-import Login from './components/Login';
+import LoginWithYup from './components/LoginWithYup';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,7 +33,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Login />
+      <LoginWithYup />
       <CountUp />
     </>
   );
