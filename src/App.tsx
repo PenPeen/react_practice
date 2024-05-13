@@ -7,6 +7,7 @@ import './App.css';
 
 import CountUp from './components/CountUp';
 import LoginWithYup from './components/LoginWithYup';
+import Parent from './components/Parent';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,6 +36,7 @@ function App() {
       </p>
       <LoginWithYup />
       <CountUp />
+      <Parent />
     </>
   );
 }
