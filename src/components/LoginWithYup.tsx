@@ -3,7 +3,7 @@ import { SyntheticEvent } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { loginFormSchema, LoginFormSchema } from '../schemas/loginForm';
+import { loginFormSchema, LoginFormSchema } from '../schema/loginForm';
 
 const LoginWithYup: React.FC = () => {
   const {
