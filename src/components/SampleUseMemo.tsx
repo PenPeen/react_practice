@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 
 import PropTypes from 'prop-types';
 
@@ -22,6 +22,14 @@ const SampleUseMemo: React.FC<{ value: number }> = ({ value }) => {
 
     return isValuePrime(value);
   }, [value]);
+
+  const sampleObj = useMemo(() => ({ value: 'hoge' }), [value]);
+  const objRef = useRef(sampleObj);
+
+  // メモ化しない場合はfalse
+  if (objRef.current) {
+    console.log(sampleObj === objRef.current);
+  }
 
   // メモ化しない場合
   // const isPrime = () => {
