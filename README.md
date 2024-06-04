@@ -1,7 +1,1 @@
-# 2024年 React 環境構築の雛形
-
-- React
-- TypeScript
-- Vite（ビルドツール）
-
-[ref.](https://zenn.dev/kazukix/articles/react-setup-2024)
+# React 動作検証や学習用に用いるレポジトリ 
