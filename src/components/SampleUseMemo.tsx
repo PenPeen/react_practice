@@ -23,7 +23,7 @@ const SampleUseMemo: React.FC<{ value: number }> = ({ value }) => {
     return isValuePrime(value);
   }, [value]);
 
-  const sampleObj = useMemo(() => ({ value: 'hoge' }), [value]);
+  const sampleObj = useMemo(() => ({ value }), [value]);
   const objRef = useRef(sampleObj);
 
   // メモ化しない場合はfalse
