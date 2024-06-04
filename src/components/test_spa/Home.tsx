@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 const Home: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -13,11 +13,11 @@ const Home: FC = () => {
     <>
       <h1>MyHome!</h1>
       <div>
-        <button onClick={updateSearchParams}>updateHogeSearchParams</button>
+        <button onClick={updateSearchParams}>
+          updateHogeSearchParams from {hogeValue}
+        </button>
       </div>
-      <div>
-        <p>hoge: {hogeValue}</p>
-      </div>
+      <Link to="/first">to First</Link>
     </>
   );
 };
