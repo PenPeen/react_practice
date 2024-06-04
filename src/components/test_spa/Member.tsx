@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const Member: FC = () => {
@@ -9,6 +10,10 @@ const Member: FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Member</title>
+      </Helmet>
+
       <h1>Member!</h1>
       <div>
         <p>member_id is {member_id}</p>
