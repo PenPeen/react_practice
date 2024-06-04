@@ -17,7 +17,12 @@ const Home: FC = () => {
           updateHogeSearchParams from {hogeValue}
         </button>
       </div>
-      <Link to="/first">to First</Link>
+      <div>
+        <Link to="/first">to First</Link>
+      </div>
+      <div>
+        <Link to="/members/1">to Member</Link>
+      </div>
     </>
   );
 };
