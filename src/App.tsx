@@ -1,11 +1,14 @@
+import { BrowserRouter } from 'react-router-dom';
+
 import './App.css';
-import Counter from '@/plain_redux_counter/Counter';
+import IndexRoutes from '@/routes/Index';
 
 function App() {
   return (
     <>
-      <h1>React Practice</h1>
-      <Counter />
+      <BrowserRouter>
+        <IndexRoutes />
+      </BrowserRouter>
     </>
   );
 }

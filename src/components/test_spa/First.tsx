@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 
-const First: FC = () => {
+export const First: FC = () => {
   const navigate = useNavigate();
 
   return (
@@ -18,5 +18,3 @@ const First: FC = () => {
     </>
   );
 };
-
-export default First;

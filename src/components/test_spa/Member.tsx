@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Member: FC = () => {
+export const Member: FC = () => {
   const navigate = useNavigate();
 
   const { member_id } = useParams();
@@ -24,5 +24,3 @@ const Member: FC = () => {
     </>
   );
 };
-
-export default Member;
