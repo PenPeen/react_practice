@@ -11,7 +11,7 @@
     "test": "vitest run --coverage",
     "update-snapshots": "vitest run --update",
     "lint": "run-p lint:*",
-    "lint:tsc": "tsc --noEmit",
+    "lint:tsc": "tsc --project ./tsconfig.json --noEmit",
     "lint:prettier": "prettier . --check",
     "lint:eslint": "eslint . --ext .ts,.tsx",
     "lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
