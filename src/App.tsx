@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 
 import './App.css';
-import IndexRoutes from './routes/Index';
+import IndexRoutes from '@/routes/Index';
 
 function App() {
   return (
