@@ -3,9 +3,7 @@ import { FC } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import First from '@/components/test_spa/First';
-import Home from '@/components/test_spa/Home';
-import Member from '@/components/test_spa/Member';
+import { First, Home, Member } from '@/components/test_spa';
 
 const IndexRoutes: FC = () => {
   return (

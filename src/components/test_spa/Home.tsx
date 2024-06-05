@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Link, useSearchParams } from 'react-router-dom';
 
-const Home: FC = () => {
+export const Home: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const hogeValue = searchParams.get('hoge');
   const updateSearchParams = () => {
@@ -26,5 +26,3 @@ const Home: FC = () => {
     </>
   );
 };
-
-export default Home;
