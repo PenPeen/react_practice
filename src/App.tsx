@@ -1,14 +1,13 @@
-import { BrowserRouter } from 'react-router-dom';
-
 import './App.css';
+import Providers from './Providers';
 import IndexRoutes from './routes/IndexRoutes';
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Providers>
         <IndexRoutes />
-      </BrowserRouter>
+      </Providers>
     </>
   );
 }
