@@ -14,8 +14,7 @@ const store = createStore(counterReducer, initialState);
 const Providers: FC<PropsWithChildren> = ({ children }) => (
   <BrowserRouter>
     <HelmetProvider>
-      {' '}
-      <ReduxProvider store={store}>{children}</ReduxProvider>{' '}
+      <ReduxProvider store={store}>{children}</ReduxProvider>
     </HelmetProvider>
   </BrowserRouter>
 );
