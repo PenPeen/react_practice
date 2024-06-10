@@ -1,12 +1,14 @@
 import './App.css';
+import ComponentA from './components/test_use_reducer/ComponentA';
+import ComponentB from './components/test_use_reducer/ComponentB';
 import Providers from './Providers';
-import IndexRoutes from './routes/IndexRoutes';
 
 function App() {
   return (
     <>
       <Providers>
-        <IndexRoutes />
+        <ComponentA />
+        <ComponentB />
       </Providers>
     </>
   );
