@@ -5,9 +5,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Provider as ReduxProvider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
-import reducers from '@/components/test_redux_tool_kit_slice/stores/counter';
+import { reducer } from '@/components/test_use_reducer/hooks/useCounter';
 
-const store = configureStore({ reducer: reducers });
+const store = configureStore({ reducer });
 
 const Providers: FC<PropsWithChildren> = ({ children }) => (
   <BrowserRouter>
