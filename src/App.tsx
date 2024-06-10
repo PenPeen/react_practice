@@ -1,14 +1,12 @@
 import './App.css';
-import ComponentA from './components/test_use_reducer/ComponentA';
-import ComponentB from './components/test_use_reducer/ComponentB';
+import Parent from './components/test_use_context_1/Parent';
 import Providers from './Providers';
 
 function App() {
   return (
     <>
       <Providers>
-        <ComponentA />
-        <ComponentB />
+        <Parent />
       </Providers>
     </>
   );
