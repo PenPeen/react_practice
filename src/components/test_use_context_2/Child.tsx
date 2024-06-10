@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react';
 
-import { ParentContext } from './Parent';
+import { ParentContext } from './ContextProvider';
 
 const Child: FC = () => {
   // 3. Context Valueの取得
