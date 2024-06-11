@@ -1,15 +1,14 @@
 import { FC, useContext } from 'react';
 
-import { ParentContext } from './ContextProvider';
+import { StateContext } from './ContextProvider';
 
 const Child: FC = () => {
   // 3. Context Valueの取得
-  const [state, hogeUp] = useContext(ParentContext);
+  const [state] = useContext(StateContext);
 
   return (
     <>
       <h2>Child</h2>
-      <button onClick={hogeUp}>hogeUp</button>
       <p>state = {state}</p>
     </>
   );
