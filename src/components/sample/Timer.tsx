@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { useTimer } from './hooks/useTimer';
+import { useTimer } from '../hooks/useTimer';
 
 const PrimeTime = styled.div`
   color: red;
