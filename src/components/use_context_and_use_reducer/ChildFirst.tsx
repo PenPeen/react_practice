@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react';
 
-import { ParentContext } from './Parent';
+import { ParentContext } from './context/ParentProvider';
 
 const ChildFirst: FC = () => {
   const { state, increment, decrement } = useContext(ParentContext);
