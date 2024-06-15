@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { useCountUp } from './hooks/useCountUp';
+import { useCountUp } from '../hooks/useCountUp';
 
 const Button = styled.button`
   padding: 8px 16px;
