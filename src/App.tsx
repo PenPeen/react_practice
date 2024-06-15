@@ -1,12 +1,12 @@
 import './App.css';
-import Sample from './components/test_use_reducer_2/Sample';
+import Parent from './components/use_context_and_use_reducer/Parent';
 import Providers from './Providers';
 
 function App() {
   return (
     <>
       <Providers>
-        <Sample />
+        <Parent />
       </Providers>
     </>
   );
