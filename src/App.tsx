@@ -1,12 +1,12 @@
 import './App.css';
-import Parent from './components/use_context_and_use_reducer/Parent';
+import SampleAsynchronous from './components/test_effect_asynchronous/SampleAsynchronous';
 import Providers from './Providers';
 
 function App() {
   return (
     <>
       <Providers>
-        <Parent />
+        <SampleAsynchronous />
       </Providers>
     </>
   );
