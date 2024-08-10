@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 
+import stylesssss from './test0810.module.css';
 import useCounter0810 from '../hooks/useCounter0810';
 
 type Props = {
@@ -14,10 +15,9 @@ const Test: FC<Props & PropsWithChildren> = ({ name }) => {
 
   return (
     <>
-      <h1>Hello! {name}</h1>
+      <h1 className={stylesssss.title}>Hello! {name}</h1>
 
       <div>
-        <div>count</div>
         <div>count = {count}</div>
         <div>
           <button onClick={countUp}>count up</button>
@@ -25,7 +25,6 @@ const Test: FC<Props & PropsWithChildren> = ({ name }) => {
       </div>
 
       <div>
-        <div>countSecond</div>
         <div>countSecond = {countSecond}</div>
         <div>
           <button onClick={countSecondUp}>count up</button>
