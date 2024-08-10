@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <Providers>
-        <Test name="React太郎" />
+        <Test name="React太郎">
+          <div>childrenとして渡されたdiv要素</div>
+        </Test>
       </Providers>
     </>
   );
