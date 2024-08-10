@@ -1,12 +1,14 @@
 import './App.css';
-import SampleAsynchronous from './components/test_effect_asynchronous/SampleAsynchronous';
+import Test from './components/sample/Test0809';
 import Providers from './Providers';
 
 function App() {
   return (
     <>
       <Providers>
-        <SampleAsynchronous />
+        <Test name="React太郎">
+          <div>childrenとして渡されたdiv要素</div>
+        </Test>
       </Providers>
     </>
   );
