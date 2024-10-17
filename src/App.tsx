@@ -1,14 +1,12 @@
 import './App.css';
-import Test from './components/sample/Test0810';
+import Sample20240813 from './components/sample/20240813/Sample20240813';
 import Providers from './Providers';
 
 function App() {
   return (
     <>
       <Providers>
-        <Test name="React太郎">
-          <div>childrenとして渡されたdiv要素</div>
-        </Test>
+        <Sample20240813 />
       </Providers>
     </>
   );
